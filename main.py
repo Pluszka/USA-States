@@ -3,7 +3,7 @@ import pandas
 screen = turtle.Screen()
 screen.title('U.S. States Game')
 IMAGE = './us-states-game-start/blank_states_img.gif'
-FONT = ['Arial', 10, 'normal']
+FONT = ['Arial', 8, 'normal']
 screen.addshape(IMAGE)
 turtle.shape(IMAGE)
 Andy = turtle.Turtle()
@@ -17,7 +17,7 @@ already_guessed = []
 game = True
 while game:
     guessed = len(already_guessed)
-    answer = screen.textinput(title=f'Guessed {guessed}/50', prompt='What\'s another State\'s name?').capitalize()
+    answer = screen.textinput(title=f'Guessed {guessed}/50', prompt='What\'s another State\'s name?').title()
     if answer in states and answer not in already_guessed:
         row = data[data.state == answer]
         x_location = int(row.x)
