@@ -31,6 +31,6 @@ while len(already_guessed) < len(states):
 
 missed = [state for state in states if state not in already_guessed]
 new_data = pandas.DataFrame(missed)
-new_data.to_csv('States to learn')
+new_data.to_csv('States to learn.csv')
 
 screen.mainloop()
